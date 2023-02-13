@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>For you</title>
+        <meta charset="utf-8">
+        <meta name="khou" content="Creator">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Confession">
+        <meta name="description" content="For you">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family: overpass,sans-serif;
+            }
+
+            div{
+                text-align: center;
+                vertical-align: center;
+            }
+
+            span{
+                color:red;
+                display: W;
+            }
+
+            button{
+                margin: 0px 0px 0 0;
+                padding: 15px 30px;
+                border: none;
+                border-radius: 10px;
+                background-color: rgb(113, 199, 249);
+                transition: 0.2s;
+                z-index: 2;
+            }
+
+            img{
+                position: absolute;
+                border-radius: 10px;
+                width: 300px;
+                z-index: 0;
+            }
+
+            #yes:hover{
+                background-color: green;
+            }
+
+            #no:hover{
+                background-color: red;
+            }
+
+            #yes{
+                position: relative;
+                left: -50px;
+            }
+
+            #no{
+                position: relative;
+                margin: 0 0 0 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Will you be <span>my valentines</span>?</h1>
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
+        </div>
+        <img id="cat-1" src="#">
+        <img id="cat-2" src="#">
+        <img id="cat-3" src="#">
+        <img id="cat-4" src="#">
+        <img id="cat-5" src="#">
+        <img id="cat-6" src="#">
+        <script>
+            const noGifs = [
+                'https://media.tenor.com/jNpoXPX1RGUAAAAC/no-cat.gif',
+                'https://media.tenor.com/aeswYw-86k8AAAAC/no-nooo.gif',
+                'https://media.tenor.com/2yJBnYOY_j8AAAAC/tonton-tonton-sticker.gif',
+                'https://media.tenor.com/SS89Y9diqt4AAAAd/nope-umm.gif',
+                'https://media.tenor.com/nJpYFifoTbUAAAAd/idola-idola-industries.gif'
+
+            ]
+
+            const yesGifs = [
+                'https://media.tenor.com/TMgqiz9JIgsAAAAC/idol-kpop.gif',
+                'https://media.tenor.com/AERCi3II1pEAAAAd/idol-junell-dominic.gif',
+                'https://media.tenor.com/jiW0xJzUUO4AAAAS/kya_cute_k_timi-cutie.gif',
+                'https://media.tenor.com/EsRA4I8YeuUAAAAM/heart-cat.gif',
+                'https://media.tenor.com/ikzpIR9NqFMAAAAd/cony-hearts.gif'
+            ]
+
+            const sadGifs = [
+                'https://media.tenor.com/PIs64JMGjDcAAAAS/sad-cat.gif',
+                'https://media.tenor.com/pQrqwWdkqSkAAAAd/stillesque.gif',
+                'https://media.tenor.com/icL9gvrOtaAAAAAd/sad-cat-looks-out-window.gif'
+            ]
+            const yes=document.getElementById("yes")
+            const no=document.getElementById("no")
+            const img = document.getElementById("cat-1")
+            const img2 = document.getElementById("cat-2")
+            const img3 = document.getElementById("cat-3")
+            const img4 = document.getElementById("cat-4")
+            const img5 = document.getElementById("cat-5")
+            const img6 = document.getElementById("cat-6")
+            let x=0;
+            let y=0;
+            
+
+            yes.addEventListener("click", function(){
+                var i = Math.floor(Math.random()*1000)+1;
+                var j = Math.floor(Math.random()*400)+1;
+                y=0;
+
+                if(x==0){
+                    alert("WOOOOO<33 see you tomorrow! chat mo nalang ");
+                    no.style.left = "0";
+                    no.style.top = "0";
+                     
+                    img2.setAttribute("src", "#");
+                    img2.style.left = "400px";
+                    img2.style.top = "250px";
+                    img2.style.display = "none";
+                                    
+                    img3.setAttribute("src", "#");
+                    img3.style.left = "850px";
+                    img3.style.top = "350px";
+                    img3.style.display = "none";
+          
+                    img4.setAttribute("src", "#");
+                    img4.style.left = "900px";
+                    img4.style.top = "50px";
+                    img4.style.display = "none";
+         
+                    img5.setAttribute("src", "#");
+                    img5.style.left = "100px";
+                    img5.style.top = "350px";
+                    img5.style.display = "none";
+
+                    img6.setAttribute("src", "#");
+                    img6.style.left = "100px";
+                    img6.style.top = "350px";
+                    img6.style.display = "none";
+                }
+                else if(x==4){
+                    alert("shet ganon mo ba ako kamahal? JOKE")
+                }
+       
+                switch(x){
+                    case 0:
+                    img.setAttribute("src", yesGifs[x]);
+                    img.style.left = "40px";
+                    img.style.top = "30px";
+                    x++;
+                    break;
+                    case 1:
+                    img2.setAttribute("src", yesGifs[x]);
+                    img2.style.left = "400px";
+                    img2.style.top = "250px";
+                    img2.style.display = "inline";
+                    x++;
+                    break;
+                    case 2:
+                    img3.setAttribute("src", yesGifs[x]);
+                    img3.style.left = "850px";
+                    img3.style.top = "350px";
+                    img3.style.display = "inline";
+                    x++;
+                    break;
+                    case 3:
+                    img4.setAttribute("src", yesGifs[x]);
+                    img4.style.left = "900px";
+                    img4.style.top = "50px";
+                    img4.style.display = "inline";
+                    x++;
+                    break;
+                    case 4:
+                    img5.setAttribute("src", yesGifs[x]);
+                    img5.style.left = "100px";
+                    img5.style.top = "350px";
+                    img5.style.display = "inline";
+                    x++;
+                    break;
+                }
+
+            });
+
+            no.addEventListener("click", function(){
+                if(y<noGifs.length){
+                    x=0;
+                    randTp();
+                    var i = Math.floor(Math.random()*600)+1;
+                    var j = Math.floor(Math.random()*200)+1;
+                    img.setAttribute("src", noGifs[y]);
+                    img.style.left = i+"px";
+                    img.style.top = j+"px";
+
+                    img2.setAttribute("src", "#");
+                    img2.style.left = "400px";
+                    img2.style.top = "250px";
+                    img2.style.display = "none";
+                                    
+                    img3.setAttribute("src", "#");
+                    img3.style.left = "850px";
+                    img3.style.top = "350px";
+                    img3.style.display = "none";
+          
+                    img4.setAttribute("src", "#");
+                    img4.style.left = "900px";
+                    img4.style.top = "50px";
+                    img4.style.display = "none";
+         
+                    img5.setAttribute("src", "#");
+                    img5.style.left = "100px";
+                    img5.style.top = "350px";
+                    img5.style.display = "none";
+
+                    img6.setAttribute("src", "#");
+                    img6.style.left = "100px";
+                    img6.style.top = "350px";
+                    img6.style.display = "none";
+      
+                    y++;
+                    console.log(y);
+
+                }
+                else if(y==5){
+                    alert("Its okayTT chat mo nalang sagot mo");
+                    img.setAttribute("src", noGifs[y]);
+                    img6.setAttribute("src", 
+                    'https://media.tenor.com/BP70qe8X0J8AAAAM/crycat-crying-cat.gif')
+                    img6.style.left = "50px";
+                    img6.style.top = "150px";
+                    img6.style.display = "inline";
+                    y++;
+                    console.log(y);
+                }
+
+                else if(y>5){
+                    alert("Oo na gets ko na wag mo na ako saktan:<<");
+                    img3.setAttribute("src", sadGifs[0]);
+                    img3.style.left = "850px";
+                    img3.style.top = "350px";
+                    img3.style.display = "inline";
+
+                    img4.setAttribute("src", sadGifs[1]);
+                    img4.style.left = "900px";
+                    img4.style.top = "20px";
+                    img4.style.display = "inline";
+
+                    img5.setAttribute("src", sadGifs[2]);
+                    img5.style.left = "500px";
+                    img5.style.top = "200px";
+                    img5.style.display = "inline";
+
+                    no.style.left = "0";
+                    no.style.top = "0";
+                    console.log(y);
+                }
+            });
+
+            function randTp(){
+                var i = Math.floor(Math.random()*400)+1;
+                var j = Math.floor(Math.random()*400)+1;
+                no.style.left = i+"px";
+                no.style.top = j+"px";
+            }
+
+            /*
+            function luv(){
+                var i = Math.floor(Math.random()*200)+1;
+                var j = Math.floor(Math.random()*500)+1;
+               
+                img.setAttribute("src". yesGifs[0]);
+                img.style.left = "100px";
+                img.style.top = "200px";
+
+                img2.setAttribute("src". yesGifs[1]);
+                img2.style.left = "20px";
+                img2.style.top = "10px";
+
+                img3.setAttribute("src". yesGifs[2]);
+                img3.style.left = i+"px";
+                img3.style.top = j+"px";
+
+                img4.setAttribute("src". yesGifs[3]);
+                img4.style.left = i+"px";
+                img4.style.top = j+"px";
+                 
+                img5.setAttribute("src". yesGifs[4]);
+                img5.style.left = i+"px";
+                img5.style.top = j+"px";
+            }
+
+            
+            function addGif1(){
+                var img = document.getElementById("cat-1");
+                var i = Math.floor(Math.random()*1700)+1;
+                var j = Math.floor(Math.random()*700)+1;
+                img.setAttribute("src", "gifs/no-cat-1.gif");
+                img.style.left = i+"px";
+                img.style.top = j+"px";
+            }
+
+            function addGif2(){
+                var img = document.getElementById("cat-2");
+                var i = Math.floor(Math.random()*1700)+1;
+                var j = Math.floor(Math.random()*700)+1;
+                img.setAttribute("src", "gifs/no-cat-2.gif");
+                img.style.left = i+"px";
+                img.style.top = j+"px";
+            }
+            */
+           
+        </script>
+    </body>
+</html>
